@@ -11,12 +11,11 @@ import {ProductService} from '../product.service';
 })
 export class ProductListComponent implements OnInit {
   products: Product[];
-  _productService: any;
 
-  constructor(private_productService: ProductService) { }
+  constructor(private _productSevice: ProductService) { }
 
   ngOnInit() {
-    this._productService.getProducts().subscribe(response =>
+    this._productSevice.getProducts().subscribe(response =>
       this.products = response);
   }
 
